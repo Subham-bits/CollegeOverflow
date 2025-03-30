@@ -99,7 +99,13 @@ export function LoginForm() {
           <span className="bg-background px-2 text-muted-foreground">Or continue with</span>
         </div>
       </div>
-      <Button variant="outline" type="button" disabled={isLoading} className="w-full">
+      <Button 
+        variant="outline" 
+        type="button" 
+        disabled={isLoading} 
+        className="w-full"
+        onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+      >
         Sign in with Google
       </Button>
     </div>
